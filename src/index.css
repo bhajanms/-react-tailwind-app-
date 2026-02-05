@@ -1,1 +1,9 @@
 @import "tailwindcss";
+@import 'react-phone-number-input/style.css';
+
+/* 🔥 Force phone country dropdown above everything */
+.PhoneInputCountrySelectDropdown {
+  position: fixed !important;
+  z-index: 9999 !important;
+  max-height: 260px !important;
+}
