@@ -77,7 +77,11 @@ export default function App() {
           <Mail size={20} />
           <input
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={e => {
+              setEmail(e.target.value)
+              setError("")
+            }}
+            
             placeholder="Email"
             className="bg-transparent outline-none w-full placeholder-white"
           />
@@ -100,7 +104,11 @@ export default function App() {
             international
             countryCallingCodeEditable={false}
             value={phone}
-            onChange={setPhone}
+            onChange={value => {
+              setPhone(value)
+              setError("")
+            }}
+            
             className="phone-input w-full"
           />
         </div>
