@@ -48,11 +48,19 @@ export default function App() {
       <div className="bg-[#0f172a] text-white py-6 px-6">
         <div className="flex items-center gap-3">
           <button
-             onClick={() => navigate(-1)}
+            onClick={() => {
+              const confirmBack = window.confirm(
+                "Do you want to go to the previous page?"
+              )
+              if (confirmBack) {
+                navigate(-1)
+              }
+            }}
             className="w-9 h-9 rounded-full border border-gray-400 flex items-center justify-center"
           >
             <ChevronLeft size={20} />
           </button>
+
 
           <h1 className="text-lg font-semibold">
             FORGOT PASSWORD
