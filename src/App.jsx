@@ -16,8 +16,10 @@ export default function App() {
 
   // ✅ email format check
   function validateEmail(value) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+    const emailRegex = /^[^\s@]+@(gmail\.com|yahoo\.com|outlook\.com|hotmail\.com)$/i
+    return emailRegex.test(value)
   }
+  
 
   function handleSubmit() {
 
